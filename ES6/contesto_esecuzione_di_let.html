@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contesto esecuzione di let</title>
+
+</head>
+<body>
+    <script>
+        const colors = ['red','green','blue']
+        //programmazione imperativa
+
+        //2014 ES5
+        for (var index = 0; index < colors.length; index++) {
+
+            element = colors[index];
+            
+        }
+
+        console.log(index,element)
+        //sono due ambiti diversi, per questo i due index non si danno problemi.
+        for (let index = 0; index < colors.length; index++) {
+
+        element = colors[index];
+        console.log("ciccio");
+
+        }
+
+        console.log(index,element)
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

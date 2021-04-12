@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable Scope Js</title>
+</head>
+<body>
+    <script>
+
+        //global scope o contesto di esecuzione globale
+        const fuori =10 //funzionerebbe anche con var_  e let
+        //Attenzione,non è globale:
+        function funzioneInterna(){
+            //function scope
+
+            const dentroInterna = 20
+            console.log("Il valore di fuori è: ", fuori);//potrei mettere più argomenti
+            
+            function funzionedentroInterna() {
+                //const fuori=1000//riutilizzo la stessa const di fuori. PROCESSO RISCHIOSO
+                //const dentroInterna=2000//riutilizzo la stessa const di fuori. PROCESSO RISCHIOSO
+                console.log("Il valore dentro la funzione interna è: ",dentroInterna)
+                console.log("Il valore di fuori dentro la funzione interna è: ",fuori)
+            }
+            funzionedentroInterna()
+        }
+
+        funzioneInterna();//bisogna chiamare la funzione
+        console.log(dentroInterna)
+        
+    </script>   
+</body>
+</html>

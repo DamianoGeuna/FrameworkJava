@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatore</title>
+
+</head>
+<body>
+    <!--componente contatore-->
+    <div id="counterA">
+        <div class="name">Contatore A</div>
+        <button class="btn-less">-</button>
+        <span class="display">0</span>
+        <button class="btn-add">+</button>
+    </div>
+    <!--Componente contatore-->
+    <div id="counterB">
+        <div class="name">Contatore B</div>
+        <button class="btn-less">-</button>
+        <span class="display">0</span>
+        <button class="btn-add">+</button>
+    </div>
+
+    <div id="counterC"
+        data-title="da 10 a 20 partendo da 15"
+        data-min="10"
+        data-max="20"
+        data-initial="15">
+
+    </div>
+
+    <div id="counterD" data-title="contatore D">
+
+    </div>
+
+    <div id="counterE" data-title=" da -10 partendo da 0 default" data-min="-10">
+
+    </div>
+
+    <div id="counterF" data-title=" a 20 partendo da 0 default" data-max="20">
+
+    </div>
+
+    <!-----------------------------
+         <input type="counter" max="10">
+         <div id="counterC" data-min="10" data-max="20" data-initial="5"></div>
+        <div id="counteD" data-title="tonno"></div>
+         ------------------------------------->
+   
+
+    
+
+
+    <script>
+        //console.log("pagina",this)
+    </script>
+    
+    
+    <script type="module" src="class/CounterElementSpec.js"></script>
+</body>
+</html>
