@@ -1,22 +1,24 @@
 class Counter {
 
     constructor(iniziale = 0,min = null,max = null){
-        this.value = parseInt(iniziale);
-        console.log(this.value)
-        if (max !=null)
-        {
-            this.max = parseInt(max);
-        }
+        this.value = Number(iniziale);
+        this.max=max;
+        //console.log(this.value)
+        //if (max !=null)
+        //{
+        //    this.max = max;
+        //}
 
-        this.min = parseInt(min);
-        if (this.value<this.min)
+        this.min = min;
+
+        if ((this.value<this.min) && (this.min != null))
         {
-            throw'initial è minore di min';
+            throw new Error('initial è minore di min');
         }
 
         if((this.value>this.max) && (this.max != null))
         {
-            throw 'initial è maggiore di max';
+            throw  new Error('initial è maggiore di max');
         }
     }
 
